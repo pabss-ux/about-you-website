@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>About You</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="script.js" defer></script>
+
+</head>
+
+
+<body>
+
+
+  <div id="loginPage" class="page show">
+
+
+    <div class="moon"></div>
+
+
+    <div class="stars">
+
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </div>
+
+
+
+    <div class="butterflies">
+
+      <div class="butterfly">🦋</div>
+
+      <div class="butterfly">🦋</div>
+
+      <div class="butterfly">🦋</div>
+
+    </div>
+
+
+
+    <div class="center-box">
+
+
+      <h1 class="login-title">
+
+        Welcome
+
+      </h1>
+
+
+
+      <form id="loginForm">
+
+
+        <input type="text" id="username" placeholder="Username" required>
+
+
+
+        <input type="password" id="password" placeholder="Password" required>
+
+
+
+        <button type="submit">
+
+          Login
+
+        </button>
+
+
+      </form>
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+  <div id="promptPage" class="page hidden">
+
+
+    <div class="center-box">
+
+
+      <h1 class="prompt-title">
+
+        Do you want to see this?
+
+      </h1>
+
+
+      <div class="prompt-buttons">
+
+
+        <button id="yesBtn">
+
+          Yes
+
+        </button>
+
+
+        <button id="noBtn">
+
+          No
+
+        </button>
+
+
+      </div>
+
+
+    </div>
+
+
+  </div>
+
+  <div id="readPage" class="page hidden">
+
+
+    <div class="read-container">
+
+
+      <h1 class="read-title">
+
+        READ THIS
+
+      </h1>
+
+
+
+      <h2 class="question-title">
+
+        What did I like about you?
+
+      </h2>
+
+
+
+      <div class="confession-text">
+
+
+        <p>I like you.</p>
+
+
+        <p>Not only because you're beautiful.</p>
+
+
+        <p>
+          I love your heart, your kindness, your responsibility,
+        </p>
+
+        <p>
+          and the way you care for the people around you.
+        </p>
+
+
+        <p>
+          I also love your grumpy side because that's the real you.
+        </p>
+
+
+        <p>
+          Out of everyone I've ever met,
+          you became my favorite person.
+        </p>
+
+
+        <p>
+          You're the first person I want to talk to when I wake up,
+        </p>
+
+        <p>
+          and the last person I want to talk to before I sleep.
+        </p>
+
+        <p>
+
+          <strong>
+            I choose you. Entirely.
+          </strong>
+
+        </p>
+
+
+
+      </div>
+
+
+
+
+      <button id="nextBarBtn" class="next-btn">
+
+        Continue →
+
+      </button>
+
+    </div>
+
+  </div>
+
+  <div id="barPage" class="page hidden">
+
+
+    <div class="moon"></div>
+
+
+    <div class="stars">
+
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </div>
+
+
+
+    <div class="butterflies">
+
+      <div class="butterfly">🦋</div>
+      <div class="butterfly">🦋</div>
+      <div class="butterfly">🦋</div>
+
+    </div>
+
+
+
+    <div class="leaves">
+
+      <div class="leaf">🍃</div>
+      <div class="leaf">🍃</div>
+      <div class="leaf">🍃</div>
+
+    </div>
+
+
+
+    <header>
+
+
+      <button id="menuBtn" class="menu-btn">
+
+        ☰
+
+      </button>
+
+
+
+      <nav id="menu" class="menu hidden">
+
+
+        <ul class="menu-list">
+
+
+          <li>
+
+            <a href="#" id="openHome" class="menu-link">
+
+              🏡 Home
+
+            </a>
+
+          </li>
+
+
+
+          <li>
+
+            <a href="#" id="openPictures" class="menu-link">
+
+              📷 Your Pictures
+
+            </a>
+
+          </li>
+
+
+
+          <li>
+
+            <a href="#" id="openMusic" class="menu-link">
+
+              🎵 Music
+
+            </a>
+
+          </li>
+
+
+
+          <li>
+
+            <a href="#" id="openPoetry" class="menu-link">
+
+              📜 Poetry
+
+            </a>
+
+          </li>
+
+
+        </ul>
+
+
+      </nav>
+
+
+    </header>
+
+
+
+
+
+    <section id="homeSection" class="content-section">
+
+
+      <div class="welcome-card">
+
+
+        <h1>
+
+          Welcome ^_^
+
+        </h1>
+
+
+
+        <p>
+
+          This website was made especially for you.
+
+          <br><br>
+
+          Every picture, every song,
+          and every word here has a reason.
+
+          <br><br>
+
+          Open the menu to continue.
+
+        </p>
+
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+    <section id="pictures" class="content-section hidden">
+
+
+      <h1 class="section-title">
+
+        Your Pictures
+
+      </h1>
+
+
+
+      <div class="gallery">
+
+
+        <div class="polaroid">
+          <img src="images/Pic 1.jpg" alt="Pic 1">
+        </div>
+
+
+        <div class="polaroid">
+          <img src="images/Pic 2.jpg" alt="Pic 2">
+        </div>
+
+
+        <div class="polaroid">
+          <img src="images/Pic 3.jpg" alt="Pic 3">
+        </div>
+
+
+        <div class="polaroid">
+          <img src="images/Pic 4.jpg" alt="Pic 4">
+        </div>
+
+
+        <div class="polaroid">
+          <img src="images/Pic 5.jpg" alt="Pic 5">
+        </div>
+
+
+        <div class="polaroid">
+          <img src="images/Pic 6.jpg" alt="Pic 6">
+        </div>
+
+
+        <div class="polaroid">
+          <img src="images/Pic 7.jpg" alt="Pic 7">
+        </div>
+
+
+        <div class="polaroid">
+          <img src="images/Pic 8.jpg" alt="Pic 8">
+        </div>
+
+
+        <div class="polaroid">
+          <img src="images/Pic 9.jpg" alt="Pic 9">
+        </div>
+
+
+        <div class="polaroid">
+          <img src="images/Pic 10.jpg" alt="Pic 10">
+        </div>
+
+      </div>
+
+    </section>
+
+    <section id="music" class="content-section hidden music-section">
+
+
+      <h1 class="section-title">
+
+        Music For You
+
+      </h1>
+
+
+
+      <div class="music-card">
+
+        <h3>🎵 Song 1</h3>
+
+        <audio controls>
+
+          <source src="music/Song 1.mp3" type="audio/mpeg">
+
+        </audio>
+
+      </div>
+
+
+
+      <div class="music-card">
+
+        <h3>🎵 Song 2</h3>
+
+        <audio controls>
+
+          <source src="music/Song 2.mp3" type="audio/mpeg">
+
+        </audio>
+
+      </div>
+
+
+
+      <div class="music-card">
+
+        <h3>🎵 Song 3</h3>
+
+        <audio controls>
+
+          <source src="music/Song 3.mp3" type="audio/mpeg">
+
+        </audio>
+
+      </div>
+
+
+
+      <div class="music-card">
+
+        <h3>🎵 Song 4</h3>
+
+        <audio controls>
+
+          <source src="music/Song 4.mp3" type="audio/mpeg">
+
+        </audio>
+
+      </div>
+
+
+
+      <div class="music-card">
+
+        <h3>🎵 Song 5</h3>
+
+        <audio controls>
+
+          <source src="music/Song 5.mp3" type="audio/mpeg">
+
+        </audio>
+
+      </div>
+
+
+
+      <div class="music-card">
+
+        <h3>🎵 Song 6</h3>
+
+        <audio controls>
+
+          <source src="music/Song 6.mp3" type="audio/mpeg">
+
+        </audio>
+
+      </div>
+
+
+
+      <div class="music-card">
+
+        <h3>🎵 Song 7</h3>
+
+        <audio controls>
+
+          <source src="music/Song 7.mp3" type="audio/mpeg">
+
+        </audio>
+
+      </div>
+
+
+
+      <div class="music-card">
+
+        <h3>🎵 Song 8</h3>
+
+        <audio controls>
+
+          <source src="music/Song 8.mp3" type="audio/mpeg">
+
+        </audio>
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+    <section id="poetry" class="content-section hidden">
+
+
+      <div class="poetry-card">
+
+
+        <h1 class="section-title">
+
+          Sa Libo-libong Kulay
+
+        </h1>
+
+
+
+        <p class="poem-text">
+
+
+          Sa libo-libong kulay, anyo, at guhit,<br>
+
+          Ikaw pa rin ang laman ng aking isipan.<br>
+
+          Wala nang sining na hihigit o papalit,<br>
+
+          Ikaw pa rin ang aking pinananabikan.<br><br>
+
+
+          Tubig man o kabundukan aking tatawirin,<br>
+
+          Masilayan lamang ang iyong kagandahan.<br>
+
+          Kung ang langit ay saksi sa wagas kong damdamin,<br>
+
+          Tatanggapin mo ba ako nang buong puso't isipan?<br><br>
+
+
+          Kung ang mga bituin sa gabi ay sadyang para sa atin,<br>
+
+          Sa bawat liwanag nila'y may pangakong gagawin.<br>
+
+          Mahal, huwag kang mangamba, asahan mong ako'y narito,<br>
+
+          Pagsinta ko ay iaalay sa'yo.<br><br>
+
+
+          Muling sisikat ang araw kong bukas,<br>
+
+          Pag-ibig ko'y patuloy na maglalakbay.<br>
+
+          Sa bawat sandali, ikaw ang lunas,<br>
+
+          Hanggang sa dulo, ikaw ang aking gabay.
+
+
+        </p>
+
+
+      </div>
+
+
+    </section>
+
+
+
+
+
+    <div id="lightbox" class="lightbox hidden">
+
+
+      <span class="close-lightbox">
+
+        &times;
+
+      </span>
+
+
+
+      <img id="lightbox-img" src="" alt="Preview">
+
+
+    </div>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,1084 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #0b3d1c, #1b5e20, #388e3c);
+    background-size: 300% 300%;
+    animation: backgroundMove 15s infinite alternate;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+
+@keyframes backgroundMove {
+
+    from {
+        background-position: left;
+    }
+
+    to {
+        background-position: right;
+    }
+
+}
+
+
+.page {
+
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+.show {
+
+    display: flex;
+
+}
+
+
+#loginPage {
+
+    position: relative;
+
+}
+
+
+.center-box {
+
+    width: 450px;
+    padding: 50px 40px;
+    border-radius: 35px;
+    text-align: center;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+    animation: loginAppear 1s ease;
+    position: relative;
+    z-index: 5;
+
+}
+
+
+.login-title {
+
+    font-size: 60px;
+    margin-bottom: 35px;
+    letter-spacing: 2px;
+    text-shadow: 0 5px 20px rgba(0,0,0,.4);
+
+}
+
+
+#loginForm {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+}
+
+
+#loginForm input {
+
+    width: 100%;
+    padding: 18px;
+    border-radius: 40px;
+    border: 1px solid rgba(255,255,255,.3);
+    outline: none;
+    font-size: 18px;
+    color: white;
+    background: rgba(255,255,255,.2);
+    backdrop-filter: blur(15px);
+
+}
+
+
+#loginForm input::placeholder {
+
+    color:white;
+
+}
+
+
+#loginForm input:focus {
+
+    transform: scale(1.05);
+    background: rgba(255,255,255,.3);
+
+}
+
+
+#loginForm button {
+
+    width:250px;
+    padding:16px;
+    border-radius:40px;
+    border:none;
+    margin-top:10px;
+    cursor:pointer;
+    color:white;
+    font-size:20px;
+    font-weight:600;
+    background:linear-gradient(45deg,#66bb6a,#a5d6a7);
+    box-shadow:0 15px 35px rgba(0,0,0,.3);
+    transition:.3s;
+
+}
+
+
+#loginForm button:hover {
+
+    transform:translateY(-8px) scale(1.05);
+
+}
+
+
+#loginPage::before,
+#loginPage::after {
+
+    display:none;
+
+}
+
+
+@keyframes loginAppear {
+
+    from {
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+.prompt-title {
+
+    font-size:50px;
+    margin-bottom:40px;
+    text-align:center;
+
+}
+
+
+.prompt-buttons {
+
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+
+}
+
+
+.prompt-buttons button,
+.next-btn {
+
+    width:250px;
+    padding:16px;
+    border:none;
+    border-radius:40px;
+    background:#66bb6a;
+    color:white;
+    font-size:20px;
+    font-weight:600;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+
+.prompt-buttons button:hover,
+.next-btn:hover {
+
+    background:#81c784;
+    transform:translateY(-5px);
+
+}
+
+.read-container {
+
+    max-width:850px;
+    text-align:center;
+
+}
+
+
+#readPage.show {
+
+    animation: fadeRead 1.2s ease forwards;
+
+}
+
+
+@keyframes fadeRead {
+
+    from {
+
+        opacity:0;
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+    }
+
+}
+
+
+.read-container {
+
+    animation: readContent 1.2s ease forwards;
+
+}
+
+
+@keyframes readContent {
+
+    from {
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+.read-title {
+
+    display:inline-block;
+    font-size:45px;
+    padding:15px 35px;
+    border-radius:25px;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    margin-bottom:35px;
+
+}
+
+
+.question-title {
+
+    font-size:35px;
+    margin-bottom:30px;
+
+}
+
+
+.confession-text {
+
+    font-size:21px;
+    line-height:2;
+    margin-bottom:35px;
+
+}
+
+
+.content-section {
+
+    width:100%;
+    min-height:100vh;
+    padding:120px 40px 60px;
+    animation:sectionFade .8s ease;
+
+}
+
+
+@keyframes sectionFade {
+
+    from {
+
+        opacity:0;
+        transform:translateY(30px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+.welcome-card {
+
+    max-width:700px;
+    margin:auto;
+    padding:50px;
+    text-align:center;
+    border-radius:30px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(20px);
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+
+.welcome-card h1 {
+
+    font-size:55px;
+    margin-bottom:25px;
+
+}
+
+
+.welcome-card p {
+
+    font-size:22px;
+    line-height:1.8;
+
+}
+
+
+.moon {
+
+    position:fixed;
+    right:60px;
+    top:40px;
+    width:130px;
+    height:130px;
+    background:#fff8d6;
+    border-radius:50%;
+    box-shadow:
+    0 0 30px #fff8d6,
+    0 0 70px rgba(255,255,200,.8);
+    z-index:1;
+
+}
+
+
+.stars span {
+
+    position:fixed;
+    width:5px;
+    height:5px;
+    background:white;
+    border-radius:50%;
+    animation:twinkle 3s infinite alternate;
+    z-index:1;
+
+}
+
+
+.stars span:nth-child(1){
+
+    top:10%;
+    left:15%;
+
+}
+
+
+.stars span:nth-child(2){
+
+    top:25%;
+    left:30%;
+
+}
+
+
+.stars span:nth-child(3){
+
+    top:15%;
+    left:50%;
+
+}
+
+
+.stars span:nth-child(4){
+
+    top:35%;
+    left:75%;
+
+}
+
+
+.stars span:nth-child(5){
+
+    top:20%;
+    left:90%;
+
+}
+
+
+.stars span:nth-child(6){
+
+    top:55%;
+    left:20%;
+
+}
+
+
+.stars span:nth-child(7){
+
+    top:65%;
+    left:45%;
+
+}
+
+
+.stars span:nth-child(8){
+
+    top:45%;
+    left:80%;
+
+}
+
+
+.stars span:nth-child(9){
+
+    top:75%;
+    left:65%;
+
+}
+
+
+.stars span:nth-child(10){
+
+    top:85%;
+    left:30%;
+
+}
+
+
+@keyframes twinkle {
+
+    from {
+
+        opacity:.3;
+        transform:scale(.7);
+
+    }
+
+
+    to {
+
+        opacity:1;
+        transform:scale(1.5);
+
+    }
+
+}
+
+.butterfly {
+
+    position:fixed;
+    font-size:30px;
+    left:-10%;
+    animation:fly 18s linear infinite;
+    z-index:2;
+
+}
+
+
+.butterfly:nth-child(1){
+
+    top:25%;
+
+}
+
+
+.butterfly:nth-child(2){
+
+    top:55%;
+    animation-delay:6s;
+
+}
+
+
+.butterfly:nth-child(3){
+
+    top:80%;
+    animation-delay:12s;
+
+}
+
+
+@keyframes fly {
+
+    from {
+
+        transform:translateX(0);
+
+    }
+
+
+    to {
+
+        transform:translateX(120vw);
+
+    }
+
+}
+
+
+header {
+
+    position:fixed;
+    top:25px;
+    left:25px;
+    z-index:1000;
+
+}
+
+
+.menu-btn {
+
+    width:60px;
+    height:60px;
+    border:none;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(15px);
+    color:white;
+    font-size:30px;
+    cursor:pointer;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.35);
+
+}
+
+
+.menu-btn:hover {
+
+    transform:scale(1.1);
+    background:rgba(255,255,255,.3);
+
+}
+
+
+.menu {
+
+    margin-top:15px;
+    width:230px;
+    padding:20px;
+    border-radius:25px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(20px);
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+
+.menu-list {
+
+    list-style:none;
+
+}
+
+
+.menu-list li {
+
+    margin:15px 0;
+
+}
+
+
+.menu-link {
+
+    display:block;
+    text-decoration:none;
+    color:white;
+    padding:14px;
+    text-align:center;
+    border-radius:15px;
+    font-size:18px;
+    transition:.3s;
+
+}
+
+
+.menu-link:hover {
+
+    background:rgba(255,255,255,.2);
+    transform:translateX(8px);
+
+}
+
+
+.section-title {
+
+    text-align:center;
+    font-size:50px;
+    margin-bottom:45px;
+    text-shadow:0 5px 20px rgba(0,0,0,.35);
+
+}
+
+
+.gallery {
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:35px;
+    justify-items:center;
+
+}
+
+
+.polaroid {
+
+    width:220px;
+    background:white;
+    padding:12px 12px 45px;
+    border-radius:8px;
+    position:relative;
+    cursor:pointer;
+    box-shadow:0 15px 35px rgba(0,0,0,.4);
+    transition:.4s;
+
+}
+
+
+.polaroid:nth-child(odd){
+
+    transform:rotate(-5deg);
+
+}
+
+
+.polaroid:nth-child(even){
+
+    transform:rotate(5deg);
+
+}
+
+
+.polaroid:hover {
+
+    transform:rotate(0deg) scale(1.1);
+
+}
+
+
+.polaroid img {
+
+    width:100%;
+    height:270px;
+    object-fit:cover;
+    border-radius:5px;
+
+}
+
+
+.polaroid::after {
+
+    content:"Memory";
+    position:absolute;
+    bottom:12px;
+    left:0;
+    width:100%;
+    text-align:center;
+    color:#555;
+    font-size:16px;
+    font-family:"Courier New",monospace;
+
+}
+
+
+.lightbox {
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,.9);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+
+}
+
+
+.lightbox img {
+
+    max-width:90%;
+    max-height:85%;
+    border-radius:15px;
+
+}
+
+
+.close-lightbox {
+
+    position:absolute;
+    top:25px;
+    right:40px;
+    color:white;
+    font-size:55px;
+    cursor:pointer;
+
+}
+
+.music-section {
+
+    width:100%;
+    min-height:100vh;
+    padding:120px 20px 80px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+
+.music-card {
+
+    width:100%;
+    max-width:650px;
+    padding:30px;
+    margin-bottom:25px;
+    border-radius:30px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(20px);
+    box-shadow:0 15px 40px rgba(0,0,0,.35);
+
+}
+
+
+.music-card h3 {
+
+    text-align:center;
+    font-size:25px;
+    margin-bottom:20px;
+
+}
+
+
+.music-card audio {
+
+    width:100%;
+
+}
+
+
+.poetry-card {
+
+    width:100%;
+    max-width:850px;
+    margin:auto;
+    padding:50px;
+    border-radius:35px;
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(20px);
+    box-shadow:0 20px 45px rgba(0,0,0,.4);
+
+}
+
+
+.poem-text {
+
+    text-align:center;
+    font-size:22px;
+    line-height:2;
+
+}
+
+
+.leaves .leaf {
+
+    position:fixed;
+    top:-20px;
+    font-size:25px;
+    animation:fall 15s linear infinite;
+    z-index:2;
+
+}
+
+
+.leaf:nth-child(1){
+
+    left:20%;
+
+}
+
+
+.leaf:nth-child(2){
+
+    left:50%;
+    animation-delay:5s;
+
+}
+
+
+.leaf:nth-child(3){
+
+    left:80%;
+    animation-delay:10s;
+
+}
+
+
+@keyframes fall {
+
+    from {
+
+        transform:translateY(-100px) rotate(0deg);
+
+    }
+
+
+    to {
+
+        transform:translateY(110vh) rotate(360deg);
+
+    }
+
+}
+
+
+audio::-webkit-media-controls-panel {
+
+    background:#e8f5e9;
+
+}
+
+
+::-webkit-scrollbar {
+
+    width:10px;
+
+}
+
+
+::-webkit-scrollbar-track {
+
+    background:#0b3d1c;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background:#66bb6a;
+    border-radius:20px;
+
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+
+    background:#81c784;
+
+}
+
+
+.fade-in {
+
+    animation:fadeIn .8s ease;
+
+}
+
+
+.slide-up {
+
+    animation:slideUp .8s ease;
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity:0;
+
+    }
+
+
+    to {
+
+        opacity:1;
+
+    }
+
+}
+
+
+@keyframes slideUp {
+
+    from {
+
+        opacity:0;
+        transform:translateY(40px);
+
+    }
+
+
+    to {
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+
+@media(max-width:768px){
+
+
+    .center-box {
+
+        width:90%;
+        padding:40px 25px;
+
+    }
+
+
+    .login-title {
+
+        font-size:40px;
+
+    }
+
+
+    .moon {
+
+        width:90px;
+        height:90px;
+        right:25px;
+        top:25px;
+
+    }
+
+
+    .section-title {
+
+        font-size:35px;
+
+    }
+
+
+    .gallery {
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+
+    .polaroid {
+
+        width:150px;
+
+    }
+
+
+    .polaroid img {
+
+        height:190px;
+
+    }
+
+
+    .poetry-card {
+
+        padding:30px 20px;
+
+    }
+
+
+    .poem-text {
+
+        font-size:18px;
+
+    }
+
+
+    .music-card {
+
+        padding:20px;
+
+    }
+
+
+    .welcome-card {
+
+        padding:30px 20px;
+
+    }
+
+
+    .welcome-card h1 {
+
+        font-size:40px;
+
+    }
+
+
+    .welcome-card p {
+
+        font-size:18px;
+
+    }
+
+
+    .prompt-title {
+
+        font-size:35px;
+
+    }
+
+
+    .question-title {
+
+        font-size:28px;
+
+    }
+
+
+    .confession-text {
+
+        font-size:18px;
+
+    }
+
+}
